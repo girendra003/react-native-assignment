@@ -4,6 +4,7 @@ import { Video, ResizeMode } from 'expo-av';
 import { StatusBar } from 'expo-status-bar';
 import Feather from '@expo/vector-icons/Feather';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
+import {Link} from 'expo-router';
 
 
 
@@ -11,6 +12,7 @@ const Carousel1 = () => {
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: 'black', borderWidth: 1, borderColor: "white" }}>
             <StatusBar hidden={true} />
+            <Link href="/(tabs)/">
 
             <View style={{ flex: 1 }}>
                 <Video
@@ -41,6 +43,7 @@ const Carousel1 = () => {
                     </View>
                 </View>
             </View>
+            </Link>
         </SafeAreaView>
     );
 };

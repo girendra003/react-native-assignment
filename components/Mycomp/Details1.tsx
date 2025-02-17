@@ -1,11 +1,10 @@
 import React from 'react';
-import { View, Text, SafeAreaView, FlatList, Image } from 'react-native';
+import { View, Text, SafeAreaView, FlatList, Image,ScrollView } from 'react-native';
 import { Video, ResizeMode } from 'expo-av';
 import { StatusBar } from 'expo-status-bar';
 import Feather from '@expo/vector-icons/Feather';// globe icon
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';// cursor icon
 import AntDesign from '@expo/vector-icons/AntDesign'; // check icon
-import { FaSignal } from "react-icons/fa6";// network icon
 
 const combinedData = [
     { id: "1", name: "HTML", image: require('@/assets/images/htmlImg.png') },
@@ -17,8 +16,9 @@ const combinedData = [
     { id: "7", name: "FRAMER MOTION", image: require('@/assets/images/framerImg.png') },
 ];
 
-const Carousel1 = () => {
+const Detail1 = () => {
     return (
+        <ScrollView style={{ flex: 1, backgroundColor: 'black' }}>
         <SafeAreaView style={{ flex: 1, backgroundColor: 'black' }}>
             <StatusBar hidden={true} />
 
@@ -85,7 +85,7 @@ const Carousel1 = () => {
                                 <Text style={{ color: "white", textAlign: 'left', paddingHorizontal: 10, fontFamily: 'CircularLight' }}>
                                     you're assigned sub-skill
                                     <MaterialCommunityIcons name="signal" size={24} color="yellow" />
-                                    LEVEL 3
+                                   <Text style={{color:'yellow'}}>LEVEL 3</Text>
                                 </Text>
                             </View>
                             <Text style={{ color: "white", textAlign: 'left', paddingHorizontal: 30, fontFamily: 'CircularLight' }}>
@@ -103,7 +103,9 @@ const Carousel1 = () => {
                 </View>
             </View>
         </SafeAreaView>
+        </ScrollView>
+
     );
 };
 
-export default Carousel1;
+export default Detail1;
