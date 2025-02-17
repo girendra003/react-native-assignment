@@ -3,9 +3,10 @@ import { ImageBackground, AppRegistry, StyleSheet, View, Text, Image, FlatList, 
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { Link } from 'expo-router';
 import Carouselcomp1 from './components/carosuelComp1';
+import Carouselcomp2 from './components/carouselComp2';
 const data = [
-    { id: "1", title: "clip1" },
-    { id: "2", title: "clip2" },
+    { id: "1", title: Carouselcomp1 },
+    { id: "2", title: Carouselcomp2 },
 ];
 
 const { width } = Dimensions.get("window");
@@ -56,15 +57,15 @@ const App = () => {
                         renderItem={({ item }) => (
                             <View
                                 style={{
-                                    width,
+                                    width: width - 70,
                                     height: 500,
                                     justifyContent: "center",
                                     alignItems: "center",
                                     // backgroundColor: "#ddd",
-                                    paddingRight: 50,
+                                    paddingRight: 20,
                                 }}
-                            >
-                                <Carouselcomp1 title={item.title}/>
+                            >   
+                                <item.title/>
                             </View>
                         )}
                         />

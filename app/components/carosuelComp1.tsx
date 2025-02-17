@@ -5,20 +5,15 @@ import { StatusBar } from 'expo-status-bar';
 import Feather from '@expo/vector-icons/Feather';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 
-// Fix: Use an object to store video paths
-const videoSources: { [key: string]: any } = {
-    "clip1": require("@/assets/video/clip1.mp4"),
-    "clip2": require("@/assets/video/clip2.mp4"),
-};
 
-const Carousel1 = ({ title }: { title: string }) => {
+const Carousel1 = () => {
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: 'black', borderWidth: 1, borderColor: "white" }}>
             <StatusBar hidden={true} />
 
             <View style={{ flex: 1 }}>
                 <Video
-                    source={videoSources[title]}
+                    source={require('@/assets/video/clip1.mp4')}
                     style={{ width: '100%', height: 250, overflow: 'hidden' }}
                     shouldPlay
                     isLooping
