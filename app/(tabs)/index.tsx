@@ -1,9 +1,9 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import { View, Text } from 'react-native';
-import details1 from './details1';
-import details2 from './details2';
+import {View,Text } from 'react-native';
+import details1 from  '@/components/Mycomp/Details1';
+import details2 from '@/components/Mycomp/Details2';
 
 const Tab = createMaterialTopTabNavigator();
 

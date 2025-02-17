@@ -2,8 +2,8 @@ import React from 'react';
 import { ImageBackground, AppRegistry, StyleSheet, View, Text, Image, FlatList, Dimensions } from 'react-native';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { Link } from 'expo-router';
-import Carouselcomp1 from './components/carosuelComp1';
-import Carouselcomp2 from './components/carouselComp2';
+import Carouselcomp1 from '@/components/Mycomp/CarouselComp1';
+import Carouselcomp2 from '@/components/Mycomp/CarouselComp2';
 const data = [
     { id: "1", title: Carouselcomp1 },
     { id: "2", title: Carouselcomp2 },
