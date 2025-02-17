@@ -1,16 +1,17 @@
 import React from 'react';
-import { View, Text, SafeAreaView } from 'react-native';
+import { View,Text, SafeAreaView,  } from 'react-native';
 import { Video, ResizeMode } from 'expo-av';
 import { StatusBar } from 'expo-status-bar';
 import Feather from '@expo/vector-icons/Feather';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
+import {Link} from 'expo-router';
 
 
 const Carousel1 = () => {
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: 'black', borderWidth: 1, borderColor: "white" }}>
             <StatusBar hidden={true} />
-
+            <Link href="/(tabs)">
             <View style={{ flex: 1 }}>
                 <Video
                     source={require('@/assets/video/clip1.mp4')}
@@ -26,6 +27,7 @@ const Carousel1 = () => {
                     </Text>
                     <View style={{ backgroundColor: "white", borderRadius: 100 }}>
                         <Feather name="globe" size={24} color="aqua" />
+                        
                     </View>
                 </View>
 
@@ -40,6 +42,7 @@ const Carousel1 = () => {
                     </View>
                 </View>
             </View>
+            </Link>
         </SafeAreaView>
     );
 };
